@@ -1,0 +1,20 @@
+#include<iostream>
+#include<cmath>
+#include<stdio.h>
+
+using namespace std;
+
+int main()
+{
+   double x,y,a,b,p, rad, endx, endy;
+    
+    cin>>x>>y>>a>>b>>p;
+    
+   rad= 3.14159265*p/180;
+   
+   endx = (x-a)*cos(rad) - (y-b)*sin(rad) + a;
+   endy = (x-a)*sin(rad) + (y-b)*cos(rad) + b;
+   
+   printf("%.2f\n%.2f",endx,endy);
+
+}

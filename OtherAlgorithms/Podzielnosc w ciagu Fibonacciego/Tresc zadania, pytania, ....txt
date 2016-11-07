@@ -1,0 +1,37 @@
+Dla zadanej liczby n wyznaczyc najmniejsza taka liczbe ind(n), ze n dzieli F( ind(n) ), gdzie F(x) to x-ty wyraz ciagu Fibonacciego.
+
+
+
+
+Twierdzenie:
+
+Dla kazdego naturalnego n zachodzi:   n <= n*n - 3*n + 3
+Dowod:
+Zalozmy, ze zadna z liczb F(1), F(2), ... F(K) nie dzieli sie przez n;
+Zatem kazda liczba przystaje do x, gdzie x nalezy do {1,2,...,n-1};
+Ponadto wsrod tych liczb nie ma takich liczb F(i) oraz F(i+1), ze F(i) przyst. F(i+1) (mod n)
+Stworzmy K par: [F(1),F(2)], [F(2),F(3)], ..., [F(K-1), F(K)]
+
+Zgodnie z powyzszymi zalozeniami mozemy utworzyc (n-1)*(n-2) = n*n - 3*n + 2 par;
+Kazda kolejna spowoduje, ze bedzie istnialo takie i, ze F(i) -=- F(i+1) (mod n)  lub ze beda istnialy takie i oraz j, ze
+
+F(i) -=- F(j)  oraz F(i+1) -=- F(j+1)
+Wtedy F(i-1) -=- F(j-1), dalej F(i-2) -=- F(j-2), ... 0 -=- F(t) dla pewnego t. 
+
+
+
+
+Hipoteza:
+Dla kazdego n naturalnego zachodzi ind(n) < 2*n   oraz dla kazdego eps > 0 istnieje takie m, ze ind(m) > (2-eps)*m
+(czyli oszacowanie to jest najlepsze z mozliwych)
+
+
+Ale jak to udowodnic???
+
+
+
+
+
+
+
+Hipoetaza inna:  Niech n bedzie liczba podzielna przez 100. Wtedy ostatnia yfra liczby ind(n) to 9 a przedostatnia to 9 lub 4.

@@ -1,0 +1,38 @@
+3
+20
+sell 10 a g 1
+sell 9 a g 2
+sell 8 a g 3
+sell 7 a g 4
+sell 6 a g 5
+sell 5 a g 6
+sell 4 a g 7
+sell 3 a g 8
+sell 2 a g 9
+sell 1 a g 10
+
+buy 10 a g 10
+buy 9 a g 9
+buy 8 a g 8
+buy 7 a g 7
+buy 6 a g 6
+buy 5 a g 5
+buy 4 a g 4
+buy 3 a g 3
+buy 2 a g 2
+buy 1 a g 1
+
+6 
+buy 10 shares at 100 
+sell 1 shares at 120 
+sell 20 shares at 110 
+buy 30 shares at 110 
+sell 10 shares at 99 
+buy 1 shares at 120 
+6 
+sell 10 shares at 100 
+buy 1 shares at 80 
+buy 20 shares at 90 
+sell 30 shares at 90 
+buy 10 shares at 101 
+sell 1 shares at 80

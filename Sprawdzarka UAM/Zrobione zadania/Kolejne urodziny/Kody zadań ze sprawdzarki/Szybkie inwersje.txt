@@ -1,0 +1,90 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+
+void SORT_SCAL(int* tab1, int p, int r);
+void SCAL_1(int* tab1,int p, int q, int r);
+int ile=0;
+
+int main()
+{
+	int l_zest, N, *tab;
+	
+	cin>>l_zest;
+	while(l_zest--)
+	{
+		ile=0;
+		cin>>N;
+		tab = new int[N+1];
+		
+		for(int i=1; i<=N; i++)
+		{
+			scanf("%d",&tab[i]);
+		}
+		SORT_SCAL(tab,1,N);
+		cout<<ile<<endl;
+		delete[]tab;
+	}
+
+	
+}
+
+void SORT_SCAL(int *tab1, int p, int r)
+{
+	if(p<r)
+	{
+		int q=(p+r)/2;
+		SORT_SCAL(tab1,p,q);
+		SORT_SCAL(tab1,q+1,r);
+		SCAL_1(tab1,p,q,r);		
+	}	
+}
+
+void SCAL_1(int* tab1,int p, int q, int r)
+{
+	int i=p, l=p, j=q+1, ile_inw=0, a=q;
+	int* tab2=new int[r+1];
+	
+	
+	while(i<=q && j<=r)
+	{
+		if(tab1[i]<=tab1[j])
+		{
+			tab2[l]=tab1[i];
+			i++;			
+		}
+		else
+		{
+           	ile_inw+=q-i+1;
+			tab2[l]=tab1[j];
+			j++;
+		}
+		l++;
+	}
+	
+	while(i<=q)
+	{
+		tab2[l]=tab1[i];
+		i++;
+		l++;
+	
+	}
+	while(j<=r)
+	{
+        if(tab1[i]>tab1[j]) ile_inw+=q-p+1;                  
+      
+		tab2[l]=tab1[j];
+		j++;
+		l++;
+	}
+	for(i=p; i<=r; i++)
+	{
+		tab1[i]=tab2[i];
+	}
+ 
+	
+	delete[]tab2;
+	tab2=0;
+	ile+=ile_inw;
+	
+}

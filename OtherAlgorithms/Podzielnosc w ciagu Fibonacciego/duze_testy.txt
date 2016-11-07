@@ -1,0 +1,277 @@
+N = 100000
+
+Dla poczatkowych 100000 wartosci maximum( ind(n) ) zachodzi這 dla n = 93750  a jego wartosc wynosila 187499
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.02 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.04 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.06 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.08 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.1 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.12 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.14 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.16 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.18 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.2 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.22 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.24 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.26 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.28 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.3 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.32 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.34 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.36 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.38 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.4 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.42 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.44 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.46 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.48 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.5 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.52 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.54 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.56 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.58 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.6 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.62 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.64 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.66 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.68 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.7 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.72 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.74 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.76 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.78 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.8 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.82 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.84 * n
+Poczawszy od wartosci 100001 wszystkie wartosci ind(n) sa mniejsze niz 1.86 * n
+Poczawszy od wartosci 99734 wszystkie wartosci ind(n) sa mniejsze niz 1.88 * n
+Poczawszy od wartosci 98684 wszystkie wartosci ind(n) sa mniejsze niz 1.9 * n
+Poczawszy od wartosci 97656 wszystkie wartosci ind(n) sa mniejsze niz 1.92 * n
+Poczawszy od wartosci 96649 wszystkie wartosci ind(n) sa mniejsze niz 1.94 * n
+Poczawszy od wartosci 95663 wszystkie wartosci ind(n) sa mniejsze niz 1.96 * n
+Poczawszy od wartosci 94697 wszystkie wartosci ind(n) sa mniejsze niz 1.98 * n
+Poczawszy od wartosci 1 wszystkie wartosci ind(n) sa mniejsze niz 2 * n
+
+
+
+N = 200000
+
+Dla poczatkowych 200000 wartosci maximum( ind(n) ) zachodzi這 dla n = 199814  a jego wartosc wynosila 299723
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.02 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.04 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.06 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.08 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.1 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.12 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.14 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.16 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.18 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.2 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.22 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.24 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.26 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.28 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.3 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.32 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.34 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.36 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.38 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.4 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.42 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.44 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.46 * n
+Poczawszy od wartosci 200001 wszystkie wartosci ind(n) sa mniejsze niz 1.48 * n
+Poczawszy od wartosci 199816 wszystkie wartosci ind(n) sa mniejsze niz 1.5 * n
+Poczawszy od wartosci 189552 wszystkie wartosci ind(n) sa mniejsze niz 1.52 * n
+Poczawszy od wartosci 187091 wszystkie wartosci ind(n) sa mniejsze niz 1.54 * n
+Poczawszy od wartosci 184692 wszystkie wartosci ind(n) sa mniejsze niz 1.56 * n
+Poczawszy od wartosci 182354 wszystkie wartosci ind(n) sa mniejsze niz 1.58 * n
+Poczawszy od wartosci 180075 wszystkie wartosci ind(n) sa mniejsze niz 1.6 * n
+Poczawszy od wartosci 177852 wszystkie wartosci ind(n) sa mniejsze niz 1.62 * n
+Poczawszy od wartosci 175683 wszystkie wartosci ind(n) sa mniejsze niz 1.64 * n
+Poczawszy od wartosci 173566 wszystkie wartosci ind(n) sa mniejsze niz 1.66 * n
+Poczawszy od wartosci 171500 wszystkie wartosci ind(n) sa mniejsze niz 1.68 * n
+Poczawszy od wartosci 169482 wszystkie wartosci ind(n) sa mniejsze niz 1.7 * n
+Poczawszy od wartosci 109012 wszystkie wartosci ind(n) sa mniejsze niz 1.72 * n
+Poczawszy od wartosci 107759 wszystkie wartosci ind(n) sa mniejsze niz 1.74 * n
+Poczawszy od wartosci 106534 wszystkie wartosci ind(n) sa mniejsze niz 1.76 * n
+Poczawszy od wartosci 105337 wszystkie wartosci ind(n) sa mniejsze niz 1.78 * n
+Poczawszy od wartosci 104167 wszystkie wartosci ind(n) sa mniejsze niz 1.8 * n
+Poczawszy od wartosci 103022 wszystkie wartosci ind(n) sa mniejsze niz 1.82 * n
+Poczawszy od wartosci 101902 wszystkie wartosci ind(n) sa mniejsze niz 1.84 * n
+Poczawszy od wartosci 100806 wszystkie wartosci ind(n) sa mniejsze niz 1.86 * n
+Poczawszy od wartosci 99734 wszystkie wartosci ind(n) sa mniejsze niz 1.88 * n
+Poczawszy od wartosci 98684 wszystkie wartosci ind(n) sa mniejsze niz 1.9 * n
+Poczawszy od wartosci 97656 wszystkie wartosci ind(n) sa mniejsze niz 1.92 * n
+Poczawszy od wartosci 96649 wszystkie wartosci ind(n) sa mniejsze niz 1.94 * n
+Poczawszy od wartosci 95663 wszystkie wartosci ind(n) sa mniejsze niz 1.96 * n
+Poczawszy od wartosci 94697 wszystkie wartosci ind(n) sa mniejsze niz 1.98 * n
+Poczawszy od wartosci 1 wszystkie wartosci ind(n) sa mniejsze niz 2 * n
+
+
+
+N = 300000
+
+Dla poczatkowych 300000 wartosci maximum( ind(n) ) zachodzi這 dla n = 299878  a jego wartosc wynosila 449813
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.02 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.04 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.06 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.08 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.1 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.12 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.14 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.16 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.18 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.2 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.22 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.24 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.26 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.28 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.3 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.32 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.34 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.36 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.38 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.4 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.42 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.44 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.46 * n
+Poczawszy od wartosci 300001 wszystkie wartosci ind(n) sa mniejsze niz 1.48 * n
+Poczawszy od wartosci 299840 wszystkie wartosci ind(n) sa mniejsze niz 1.5 * n
+Poczawszy od wartosci 271381 wszystkie wartosci ind(n) sa mniejsze niz 1.52 * n
+Poczawszy od wartosci 261927 wszystkie wartosci ind(n) sa mniejsze niz 1.54 * n
+Poczawszy od wartosci 258569 wszystkie wartosci ind(n) sa mniejsze niz 1.56 * n
+Poczawszy od wartosci 255296 wszystkie wartosci ind(n) sa mniejsze niz 1.58 * n
+Poczawszy od wartosci 252105 wszystkie wartosci ind(n) sa mniejsze niz 1.6 * n
+Poczawszy od wartosci 248992 wszystkie wartosci ind(n) sa mniejsze niz 1.62 * n
+Poczawszy od wartosci 245956 wszystkie wartosci ind(n) sa mniejsze niz 1.64 * n
+Poczawszy od wartosci 242993 wszystkie wartosci ind(n) sa mniejsze niz 1.66 * n
+Poczawszy od wartosci 240100 wszystkie wartosci ind(n) sa mniejsze niz 1.68 * n
+Poczawszy od wartosci 237275 wszystkie wartosci ind(n) sa mniejsze niz 1.7 * n
+Poczawszy od wartosci 109012 wszystkie wartosci ind(n) sa mniejsze niz 1.72 * n
+Poczawszy od wartosci 107759 wszystkie wartosci ind(n) sa mniejsze niz 1.74 * n
+Poczawszy od wartosci 106534 wszystkie wartosci ind(n) sa mniejsze niz 1.76 * n
+Poczawszy od wartosci 105337 wszystkie wartosci ind(n) sa mniejsze niz 1.78 * n
+Poczawszy od wartosci 104167 wszystkie wartosci ind(n) sa mniejsze niz 1.8 * n
+Poczawszy od wartosci 103022 wszystkie wartosci ind(n) sa mniejsze niz 1.82 * n
+Poczawszy od wartosci 101902 wszystkie wartosci ind(n) sa mniejsze niz 1.84 * n
+Poczawszy od wartosci 100806 wszystkie wartosci ind(n) sa mniejsze niz 1.86 * n
+Poczawszy od wartosci 99734 wszystkie wartosci ind(n) sa mniejsze niz 1.88 * n
+Poczawszy od wartosci 98684 wszystkie wartosci ind(n) sa mniejsze niz 1.9 * n
+Poczawszy od wartosci 97656 wszystkie wartosci ind(n) sa mniejsze niz 1.92 * n
+Poczawszy od wartosci 96649 wszystkie wartosci ind(n) sa mniejsze niz 1.94 * n
+Poczawszy od wartosci 95663 wszystkie wartosci ind(n) sa mniejsze niz 1.96 * n
+Poczawszy od wartosci 94697 wszystkie wartosci ind(n) sa mniejsze niz 1.98 * n
+Poczawszy od wartosci 1 wszystkie wartosci ind(n) sa mniejsze niz 2 * n
+
+
+
+N = 400000
+
+Dla poczatkowych 400000 wartosci maximum( ind(n) ) zachodzi這 dla n = 399862  a jego wartosc wynosila 599789
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.02 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.04 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.06 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.08 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.1 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.12 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.14 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.16 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.18 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.2 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.22 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.24 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.26 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.28 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.3 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.32 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.34 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.36 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.38 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.4 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.42 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.44 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.46 * n
+Poczawszy od wartosci 400001 wszystkie wartosci ind(n) sa mniejsze niz 1.48 * n
+Poczawszy od wartosci 399616 wszystkie wartosci ind(n) sa mniejsze niz 1.5 * n
+Poczawszy od wartosci 345395 wszystkie wartosci ind(n) sa mniejsze niz 1.52 * n
+Poczawszy od wartosci 340909 wszystkie wartosci ind(n) sa mniejsze niz 1.54 * n
+Poczawszy od wartosci 336538 wszystkie wartosci ind(n) sa mniejsze niz 1.56 * n
+Poczawszy od wartosci 332278 wszystkie wartosci ind(n) sa mniejsze niz 1.58 * n
+Poczawszy od wartosci 328125 wszystkie wartosci ind(n) sa mniejsze niz 1.6 * n
+Poczawszy od wartosci 324074 wszystkie wartosci ind(n) sa mniejsze niz 1.62 * n
+Poczawszy od wartosci 320122 wszystkie wartosci ind(n) sa mniejsze niz 1.64 * n
+Poczawszy od wartosci 316265 wszystkie wartosci ind(n) sa mniejsze niz 1.66 * n
+Poczawszy od wartosci 312500 wszystkie wartosci ind(n) sa mniejsze niz 1.68 * n
+Poczawszy od wartosci 308823 wszystkie wartosci ind(n) sa mniejsze niz 1.7 * n
+Poczawszy od wartosci 109012 wszystkie wartosci ind(n) sa mniejsze niz 1.72 * n
+Poczawszy od wartosci 107759 wszystkie wartosci ind(n) sa mniejsze niz 1.74 * n
+Poczawszy od wartosci 106534 wszystkie wartosci ind(n) sa mniejsze niz 1.76 * n
+Poczawszy od wartosci 105337 wszystkie wartosci ind(n) sa mniejsze niz 1.78 * n
+Poczawszy od wartosci 104167 wszystkie wartosci ind(n) sa mniejsze niz 1.8 * n
+Poczawszy od wartosci 103022 wszystkie wartosci ind(n) sa mniejsze niz 1.82 * n
+Poczawszy od wartosci 101902 wszystkie wartosci ind(n) sa mniejsze niz 1.84 * n
+Poczawszy od wartosci 100806 wszystkie wartosci ind(n) sa mniejsze niz 1.86 * n
+Poczawszy od wartosci 99734 wszystkie wartosci ind(n) sa mniejsze niz 1.88 * n
+Poczawszy od wartosci 98684 wszystkie wartosci ind(n) sa mniejsze niz 1.9 * n
+Poczawszy od wartosci 97656 wszystkie wartosci ind(n) sa mniejsze niz 1.92 * n
+Poczawszy od wartosci 96649 wszystkie wartosci ind(n) sa mniejsze niz 1.94 * n
+Poczawszy od wartosci 95663 wszystkie wartosci ind(n) sa mniejsze niz 1.96 * n
+Poczawszy od wartosci 94697 wszystkie wartosci ind(n) sa mniejsze niz 1.98 * n
+Poczawszy od wartosci 1 wszystkie wartosci ind(n) sa mniejsze niz 2 * n
+
+
+
+N = 500000
+
+Dla poczatkowych 500000 wartosci maximum( ind(n) ) zachodzi這 dla n = 468750  a jego wartosc wynosila 937499
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.02 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.04 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.06 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.08 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.1 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.12 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.14 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.16 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.18 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.2 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.22 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.24 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.26 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.28 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.3 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.32 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.34 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.36 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.38 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.4 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.42 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.44 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.46 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.48 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.5 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.52 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.54 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.56 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.58 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.6 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.62 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.64 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.66 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.68 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.7 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.72 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.74 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.76 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.78 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.8 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.82 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.84 * n
+Poczawszy od wartosci 500001 wszystkie wartosci ind(n) sa mniejsze niz 1.86 * n
+Poczawszy od wartosci 498670 wszystkie wartosci ind(n) sa mniejsze niz 1.88 * n
+Poczawszy od wartosci 493421 wszystkie wartosci ind(n) sa mniejsze niz 1.9 * n
+Poczawszy od wartosci 488281 wszystkie wartosci ind(n) sa mniejsze niz 1.92 * n
+Poczawszy od wartosci 483247 wszystkie wartosci ind(n) sa mniejsze niz 1.94 * n
+Poczawszy od wartosci 478316 wszystkie wartosci ind(n) sa mniejsze niz 1.96 * n
+Poczawszy od wartosci 473485 wszystkie wartosci ind(n) sa mniejsze niz 1.98 * n
+Poczawszy od wartosci 1 wszystkie wartosci ind(n) sa mniejsze niz 2 * n

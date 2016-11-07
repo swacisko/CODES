@@ -1,0 +1,5 @@
+Niech e(n) oznacza maksymalny stopien losowo wygenerowanego drzewa na n wierzcholkach.
+
+Jaka jest wartosc oczekiwana E( e(n) ) ??
+
+W zalaczonym pliku widac, ze jest rosnaca dla rosnacych n, jednak raczje dosc wolno... jak wolno?

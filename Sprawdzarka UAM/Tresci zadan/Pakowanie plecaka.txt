@@ -1,0 +1,34 @@
+Problem Pakowanie plecaka
+Ma³y Jacuœ jedzie wkrótce na obóz harcerski. Jak zawsze zastanawia siê co zapakowaæ do plecaka, który przecie¿ ma ograniczony udŸwig, tak aby spakowane przedmioty by³y jak najbardziej u¿yteczne. Ch³opiec jest w posiadaniu pewnej liczby przedmiotów, z których ka¿dy jest opisany dwiema liczbami: wartoœæ (odzwierciedlaj¹ca u¿ytecznoœæ przedmiotu) oraz ciê¿ar. Niektóre przedmioty s¹ Jacusiowi niepotrzebne, a wrêcz mog¹ przeszkadzaæ, st¹d wartoœci przedmiotów mog¹ byæ mniejsze lub równe 0. Przy pakowaniu ch³opcu zale¿y przede wszystkim na tym, ¿eby uzyskaæ upakowanie maksymalne, w sensie mo¿liwoœci do³o¿enia czegoœ wiêcej. Tj. chce tak za³adowaæ plecak (choæby nawet zbêdnymi rzeczami), by nie móc do³o¿yæ, ¿adnego innego przedmiotu, bêd¹cego w jego posiadaniu, bez wyjmowania przedmiotów ju¿ w³o¿onych (có¿... harcerzem to on jest mo¿e pocz¹tkuj¹cym, ale za to jest zafascynowany popisami strongmanów). Dopiero spoœród wszystkich upakowañ maksymalnych chce wybraæ upakowanie o mo¿liwie najwiêkszej sumie wartoœci przedmiotów.
+ 
+Zadanie
+ 
+Maj¹c dan¹ liczbê przedmiotów posiadanych przez Jacusia oraz ich wartoœci i ciê¿ary, nale¿y podaæ jak¹ ³¹cznie najwiêksz¹ wartoœæ mo¿na uzyskaæ, przy za³o¿eniu maksymalnego upakowania.
+ 
+Specyfikacja wejœcia
+ 
+W pierwszym wierszu wejœcia podana jest dodatnia liczba ca³kowita D (D ? 50), oznaczaj¹ca liczbê zestawów testowych, które dalej pojawi¹ siê na wejœciu. W pierwszym wierszu zestawu znajduj¹ siê dwie liczby ca³kowite N i M (1 ? N ? 1.000, 1 ? M ? 8.000), oznaczaj¹ce odpowiednio liczbê przedmiotów Jacusia oraz maksymalny udŸwig plecaka. Kolejne N wierszy zestawu to opisy przedmiotów. Ka¿dy nich sk³ada siê z dwóch liczb ca³kowitych W i V (1 ? W ? M, –1.000.000 ? V ? 1.000.000), oznaczaj¹cych ciê¿ar oraz wartoœæ przedmiotu.
+ 
+Specyfikacja wyjœcia
+ 
+Dla ka¿dego zestawu danych nale¿y zapisaæ, w osobnym wierszu, jedn¹ liczbê ca³kowit¹ - najwiêksz¹ sumaryczn¹ wartoœæ przedmiotów jak¹ da siê zapakowaæ zgodnie z preferencjami Jacusia.
+ 
+Przyk³ad
+ 
+Wejœcie
+3
+2 2
+2 3
+1 4
+3 8
+3 3
+4 4
+6 6
+3 10
+1 4
+1 -3
+1 2
+Wyjœcie
+4
+7
+3

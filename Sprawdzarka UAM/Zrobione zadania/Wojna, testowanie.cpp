@@ -1,0 +1,129 @@
+#include<iostream>
+using namespace std;
+
+
+class Point
+{
+public:
+	long long x,y;
+	Point( ) {	}	
+};
+
+
+bool liesOnLine( const Point &p1, const Point &p2 )
+{
+	if( (p1.x == 0 && p1.y == 0) || (p2.x == 0 && p2.y == 0) ) return true;
+	else if( p1.y == p2.y && p1.y == 0 && p1.x * p2.x <=0 ) return true;
+	else if( p1.x == 0 || p2.x == 0 )
+	{
+		if( p1.x != p2.x ) return false;		
+		if( p1.y * p2.y <=0 ) return true;
+		
+		return false;
+	}
+	else if( (long double)p1.y/p1.x == (long double)p2.y/p2.x && p1.x * p2.x <= 0 ) return true;
+	
+	return false;
+}
+
+bool cutsPositive( Point p1, Point p2 ) // czemu to kurestwo nie dziala?
+{
+	if( p1.y * p2.y > 0 ) return false;
+	if( p1.x == p2.x )
+	{
+		if( p1.x > 0 ) return true;
+		else return false;
+	}
+	
+	long double	a = (long double)( p1.y - p2.y ) / (long double)( p1.x - p2.x );
+	long double b = (long double)p1.y - a * (long double)p1.x;
+	
+	if( -b/a > 0 ) return true;
+	return false;
+}
+
+int main()
+{
+	long long x,y,K, Tx, Ty;
+	long long cuts;
+	Point *tab;
+	bool lies;
+	
+	long long l_zest;	
+	cin >> l_zest;
+	while( l_zest-- )
+	{
+		lies = false;
+		cuts = 0;
+		cin >> Tx >> Ty >> K;
+		
+		tab = new Point[K+3];
+		
+		for( long long i=0; i<K; i++ )
+		{
+			cin >> x >> y;
+			tab[i].x = x - Tx;
+			tab[i].y = y - Ty; // przesuwam wszystko tak, aby dom Torvaldsa byl w (0,0)
+		}
+		
+		Tx = Ty = 0; // ustawiam dom Torvaldsa na (0,0)
+		
+		tab[K].x = tab[0].x;
+		tab[K].y = tab[0].y; // dodaje elementy aby moc odniesc sie do tab[i-1] i tab[i+1] w jednej petli bez if`ow;
+		
+		tab[K+1].x = tab[1].x;
+		tab[K+1].y = tab[1].y;
+		
+		tab[K+2].x = tab[2].x;
+		tab[K+2].y = tab[2].y;
+		
+		for(long long i=1; i<=K; i++)
+		{
+			if( liesOnLine( tab[i], tab[i+1] ) )
+			{
+				lies =  true;
+				cuts = 1;
+				break;
+			}
+				
+			if( tab[i].y == 0 && tab[i+1].y == 0 )
+			{
+				if( tab[i].x > 0 && tab[i+1].x > 0 )
+				{
+					if( tab[i+2].y * tab[ i-1 ].y < 0  )
+					{
+						//	cout << "INCR 1\t\t";
+							cuts++;
+					}
+					
+				}
+			}
+			else
+			{	
+				if( tab[i].y == 0 && tab[i].x >= 0 )
+				{
+					if( tab[i+1].y * tab[ i-1 ].y < 0 ) 
+					{
+					//	cout << "INCR 2\t\t";
+						cuts++;
+					}
+				}
+				else if( tab[i+1].y == 0 );
+				else if( cutsPositive( tab[i], tab[i+1] )  ){/*	cout << "INCR 3\t\t, x1,y1,x2,y2:  " << tab[i].x << tab[i].y << tab[i+1].x << tab[i+1].y<<endl; ;*/	 cuts++;}
+			}
+		}
+		
+//		cout << endl << "Liczba przeciec: " << cuts << endl; 
+		
+		if( cuts % 2 == 1 ) lies = true;
+		else lies = false;
+		
+		if( lies ) cout << "TAK" << endl;
+		else cout << "NIE" << endl;
+		
+		
+		delete[]tab;
+	}
+	
+	
+}
