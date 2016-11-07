@@ -1,0 +1,6 @@
+W plikach sa zapisane programy, znajdujace leadera w ringu zorientowanym i niezorientowanym.
+
+Program wczytuje ze standardowego wejscia liczbe N, a nastepnie tworzy Ring(zorientowany lub niezorientowany) na N wierzcholkach.
+Z rundy na runde, wierzcholki przesylaja w odpowienim kierunku komunikaty( komunikatem jest maksymalna wartosc dotychczas "napotkanej"
+przez dany komunikat liczby id_los). W momencie, gdy do wierzcholka dotrze komunikat o wartosci rownej jego id_los,
+to wiadomo, ze to wlasnie ten wierzcholek jest leaderem. W takim przypadku zostanie wyswietlony komunikat: "Moje id to: " << ID << "  JESTEM LEADEREM!!!"(albo jakis inny podobny...)

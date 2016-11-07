@@ -1,0 +1,43 @@
+W programie zosta³ przedstawiony sposob dzialania algorytmu z zadania "gossiping".
+
+
+Na poczatku zostaje stworzona krata o boku N.
+Wierzcholek w i-tym wierzu i k-tej kolumnie ma id = i*(N-1) + k;
+Dla N = 3 jest to krata postaci:
+
+0 1 2
+3 4 5
+6 7 8
+
+
+Zasada dzialania algorytmu:
+
+Id wierzcholkow sa przekazywane 'falami';
+
+Na samym poczatku kazdy wierzcholek zna tylko swoje id_los;
+
+W pierwszym kroku wszystkie wierzcholki z pierwszego rzedu wysylaja swoje id_los wirzcholkom 'na dole',
+natomiast wszystkie wierzcholki z ostatniego rzedu wysylaja swoje id_los tym bezposrednio 'nad nimi';
+
+
+W kolejnych krokach, jezeli wierzcholek otrzymal komunikat, to:
+	zapisuje w znanych sobie id_los wierzcholkow wszystkie id_los, ktore otrzymal w komunikacie oraz wysyla komunikat
+	w kierunku przeciwnym do tego wyznaczonego przez otrzymany komunikat. W tym komunikacie przesy³a wszystkie znane sobie id_los;
+
+Po N-1 krokach kazdy wierzcholek bedzie znal id_los wszystkich, i tylko tych wierzcholkow, ktore znajduja sie w tej samej kolumnie.
+(UWAGA, w algorytmie jest to okolo N+2 rund, poniewaz wierzcholek musi najpierw wyslac, a na koncu otrzymac komunikat, a to 'zjada' runde ).
+
+
+
+Teraz powtarzamy czynnosc przesylania komunikatow, tyle tylko ze nie w kolumnach tylko w wierszach.
+Po N-1 krokach kazdy wierzcholek bedzie znal wszystkie id_los wszystkich wierzcholkow.
+
+
+
+Czas dzialania algorytmu to O(N) rund - O(N) w pionie i O(N) w poziomie.
+Ilosc wyslanych komunikatow jest rzedu O(N^2) kazdy wierzcholek wysle maksymalnie 4 komunikaty.
+Dlugosc komunikatu w pierwszych N-1 krokach jest dlugosci:  i+1    w i-tym kroku.   Dlugosc komunikatu to ilosc id_los przekazywanych sasiadowi.
+Dlugosc komunikatu w krokach z przedzialu N do 2N-2 jest dlugosci:  (N-i+1)*N    w i-tym kroku.
+
+
+Jest oczywistym, ze przy takim sposobie przekazywania iformacji, zgodnie z poleceniem zadania, wszystkie przekazane komunikaty sa parami rozne.

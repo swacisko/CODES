@@ -1,0 +1,13 @@
+W programie zosta przedstawiony algorytm wyznaczajacy lidera w dowolnym grafie.
+
+Na poczatku mozna stworzyc wlasna strukture grafu, albo pozwolisc programowi to zrobic.
+Jezeli zezwalamy programowi na stworzenie struktury, mo¿e siê okazaæ, ze otrzymany graf nie jest spojny. Wowcza po zakonczeniu dzia³ania
+algorytmu moze sie okazaæ, ze wiele wierzcholkow uwaza ze jest leaderem. Owszem, sa wtedy liderami w swojej skladowej spojnosci.
+
+Zosta³a w zadaniu u¿yta technika floodingu. W kazdej rundzie Kazdy wierzcholek przekazuje wszystkim swoim sasiadom dotychczasowa najwieksza
+znana mu wartosc id_los. Ze wzglêdu na bardzo du¿a ilosc kounikatów oraz mo¿liwoœæ 'zapêtlenia' wprowadzi³em ograniczenie/optymalizacjê, aby nigdy komunikat wys³any przez dany wierzcholek nie by³ przez inne wierzcholki wysylany wielokrotnie.
+Ze wzglêdu na bardzo du¿¹ liczbê przesy³anych komunikatów, w programie ograniczy³em iloœæ wypisywanych informacji podczas rund.
+
+
+Ilosc rund potrzebna na dzia³anie algorytmu jest wiêc rzêdu O(N), podczas gdy z³o¿onoœæ asymptotyczna liczby wysy³anych komunikatów jest
+rzêdu O(N^2).

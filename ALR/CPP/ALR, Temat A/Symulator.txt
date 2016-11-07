@@ -1,0 +1,22 @@
+W pliku symulator ALR znajduje sie napisany przeze mnie symulator synchroniczny. Zostal on napisany w jezyku C++.
+
+Nadaje sie on bardzo dobrze do symulacji prostych algorytmow dzialajacych 'rundowo'. Po kolei, dla kazdego wierzcholka zostaje wykonana
+runda, po czym mamy mozliwosc zobaczenia stanu wierzcholkow po danej rundzie, przed wykonaniem nastepnej.
+
+Zasada dzialania opiera sie na switchu. Komenda fiber yield zostala przeze mnie zamieniona przez zmiane wartosci zmiennej, dzieki ktorej
+w switchu zostaje wykonany inny fragment kodu.
+
+Niestety w bardziej skomplikowanych algorytmach jest to zdecydowanie mniej czytelny i ciezszy w implementacji sposob symulacji rundy, jednak dla tych prostszych,
+w szczegolnosci tych, w ktorych komenda fiber yield wystepuje tylko raz(np na koncu while'a), caly kod znajduje sie w jednym/dwoch case'ach,
+nie ma wiec wtedy wiekszego problemu.
+
+Pod koniec kazdej rundy, w grafie graph_copy zostaja przepisane zmiany dokonane na danych wierzcholku, tak, aby podczas danej rundy nie\
+ingerowac w stan pozostalych wierzcholkow, ale zeby w kolejnej te zmiany juz byly widoczne.
+
+
+Caly algorytm do danego zadania musi zostac zapisany we fragmencie kodu w klasie vert, poczawszy od funkcji updateRoundData, konczac na
+modykifacji funkcji sendMessage(jezeli konieczne). W ostatnim przypadku(modufikacji funkcji sendMessage) trzeba rowniez odpowiednio
+zmodyfikowac zdefiniowana na poczatku programu kalse notfi odpowiadajaca wysylanym przez wierzcholki komunikatom.
+
+
+Przy funkcjach, klasach, przestrzeni nazw, ... znajduja sie krotkie wyjasnienia, odnosnie przeznaczenia danego bytu.

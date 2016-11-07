@@ -1,0 +1,263 @@
+wm geom .konsola 667x765+637+65; wm geom .output 309x348+265+64; wm withdraw .; kons_font 15
+kons_font 16
+
+load ./q3_64.so
+  #% 
+
+## generator permutacji
+#
+
+proc wypelnijListe li {
+  set w {}
+  for {set i 0} {$i<$li} {incr i} {lappend w 0}
+  set w
+}
+  #% 
+
+fiber create 1 start
+  #% 
+
+proc Inicjalizacja nr {
+  fiber$nr alias _puts _puts
+  fiber$nr alias maineval eval
+  fiber$nr alias wypelnijListe wypelnijListe
+  fiber$nr eval "set nr $nr; set run 1"
+  fiber$nr eval {
+    set liElem 3
+
+    proc start {} {
+      set ::bity [wypelnijListe $::liElem]
+      set ::wynik [wypelnijListe $::liElem]
+        # + dwie zmienne globalne...
+      permutacja 0
+    }
+  #% 
+    proc permutacja li {
+      if {$li>=$::liElem} {
+        maineval "set zm {$::wynik}"
+        fiber switchto main
+        set ::run; # jesli blad to koniec dzialania fibera!
+        return
+      }
+      for {set i 0} {$i<$::liElem} {incr i} {
+        if {[lindex $::bity $i]==0} {
+          lset ::wynik $i $li
+          lset ::bity $i 1
+          permutacja [expr {$li+1}]
+          lset ::bity $i 0
+        }
+      }
+    }
+  #% 
+  }
+}
+  #% 
+Inicjalizacja 0
+  #% 
+
+fiber error
+  #% ended
+  #% {}
+
+proc Restart nr {
+  if { [lindex [fiber error] $nr]!="" } {
+    fiber restart $nr
+  } else {
+    fiber$nr eval {unset ::run}; fiber switchto $nr
+      # + jedyny sposob zeby przerwac prace fibera !!!
+    fiber$nr eval {set ::run 1}; fiber restart $nr
+  }
+}
+  #% 
+Restart 0
+  #% 
+  #% 
+  # + restartowanie fibera 0
+
+fiber0 eval {set ::liElem 4}
+  #% 4
+  #% 4
+  #% 4
+
+fiber switchto 0; set zm
+  #% 3 2 1 0
+  #% 3 2 1 0
+  #% 2 3 1 0
+  #% 3 1 2 0
+  #% 2 1 3 0
+  #% 1 3 2 0
+  #% 1 2 3 0
+  #% 3 2 0 1
+  #% 2 3 0 1
+  #% 3 1 0 2
+  #% 2 1 0 3
+  #% 1 3 0 2
+  #% 1 2 0 3
+  #% 3 0 2 1
+  #% 2 0 3 1
+  #% 3 0 1 2
+  #% 2 0 1 3
+  #% 1 0 3 2
+  #% 1 0 2 3
+  #% 0 3 2 1
+  #% 0 2 3 1
+  #% 0 3 1 2
+  #% 0 2 1 3
+  #% 0 1 3 2
+  #% 0 1 2 3
+  #% 0 2 1 3
+  #% 0 1 3 2
+  #% 0 1 2 3
+  # + odczyt
+
+
+
+
+0: , 
+1: 0, 
+2: , 
+3: , 
+4: , 
+0: , 
+1: , 
+2: 1, 
+3: , 
+4: , 
+0: , 
+1: , 
+2: , 
+3: 2, 
+4: , 
+0: , 
+1: , 
+2: , 
+3: , 
+4: 3, 
+0: 4, 
+1: , 
+2: , 
+3: , 
+4: , 
+0: , 
+1: 5, 
+2: , 
+3: , 
+4: , 
+0: , 
+1: , 
+2: 6, 
+3: , 
+4: , 
+0: , 
+1: , 
+2: , 
+3: 7, 
+4: , 
+
+
+
+load ./q3_64.so
+  #% 
+ 
+source symul_lib.tcl; # ladowanie symulatora
+  #% 
+ 
+# tworzymy graf komunikacyjny (w tym wypadku cykl)
+set liczbaWierz 5
+  #% 5
+set sasiedzi(0) {4 1}
+  #% 4 1
+set sasiedzi(1) {0 2}
+  #% 0 2
+set sasiedzi(2) {1 3}
+  #% 1 3
+set sasiedzi(3) {2 4}
+  #% 2 4
+set sasiedzi(4) {3 0}
+  #% 3 0
+ 
+fiber create $liczbaWierz {
+ 
+  if {$id==0} {wyslij 1 0}
+  fiber yield; # oznacza koniec rundy
+ 
+  while {$run} { # zmienna run pozwala zakonczyc dzialanie symulacji!!
+    if {$kom0!=""} {
+      set x $kom0
+      incr x
+      kom1_wyslij $x
+      #wyslij 1 $x; # alternatywa!
+    }
+    fiber yield; # oznacza koniec rundy
+  }
+}
+ 
+Inicjalizacja; # koniecznie trzeba to wywolac!!!
+ 
+proc wizualizacja {} {
+  fiber_iterate {_puts "$id: $kom0, $kom1"}
+    # petla fiber_iterate iteruje po wszystkich fiberach
+    # proc wizualizacja wywolujemy z konsoli po kazdej rundzie
+}
+  #% 
+ 
+# ... do tego miejsca mozna wszystko wykonac
+ 
+if 0 {
+set_run 0; fiber yield; runda; set_run 1; fiber delete
+  # usuwanie fiberow
+set_run 0; fiber yield; runda; set_run 1; fiber restart
+  # restart kodu fiberow
+fiber error
+  # wyswietla stan fiberow ({}, ended, error)
+fiber_eval 0 {set id}
+  # wykonanie kodu w fiberze 0
+  # UWAGA: fiber_eval wykonuje kod na poziomie globalnym
+  #   "fiber0 eval {set id}" wykonuje kod tam gdzie fiber zostal zamrozony...
+}
+ 
+fiber yield; runda; wizualizacja
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  #% 
+  # wykonuje kolejna runde...
+  # procedura runda obsluguje komunikaty
+ 
+ 
+ 
+# Przyklad symulacji modelu asynchronicznego
+# + w tym przykladzie wierz. wysylaja i przekazuja
+#   komunikaty postacai "Q $id_los"
+#
+
+
+
+
+
+
+

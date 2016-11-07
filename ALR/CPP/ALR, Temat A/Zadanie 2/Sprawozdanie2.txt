@@ -1,0 +1,10 @@
+Program tworzy drzewo ukorzenione na N wierzcholkach (N wczytane ze standardowego wejscia).
+Drzewo jest podane w nastepujacej postaci:
+Wierzcholek nr 0 jest korzeniem, jezeli wierzcholek posiada syna, to znajduje sie on na liscie jego sasiadow( zatem wierzcholki nie 
+posiadaja wskaznikow na rodzica, tylko na synow). [Oczywiscie bardzo latwo z drzewa, w ktorym weirzcholki posiadaja wskaznik na rodzica stworzyc
+drzewo, w ktorym wierzcholki posiadaja wskazniki na synow].
+
+Algoytm zaimplementowany jest w jezyku c++, zgodnie z algorytmem C&V.
+Po kazdej wykonanej rundzie mozna zobaczyc stan wierzcholkow.
+Takze podczas wykonywania rund zostana wyswietlane pewne informacje o tym, co sie "w danym wierzcholku" w
+danym momencie dzieje.

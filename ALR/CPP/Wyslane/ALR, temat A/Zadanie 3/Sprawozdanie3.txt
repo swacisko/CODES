@@ -1,0 +1,13 @@
+W zalaczonym w tym folderze pliku znajduje sie program, znajdujacy leadera w zorientowanym ringu w czasie O(NlgN) oraz przy uzyciu
+(NlgN) komunikatow.
+
+Na poczatku kazdy wierzcholek wysyla komunikat do swoich sasiadow zawierajacy wlasne id_los.
+Jezeli do danego wierzcholka dotrze komunikat-liczba wieksza od jego id_los, to dany wierzcholek na pewno nie jest leaderem, nie bierze wiec
+wiecej udzialu w poszukiwaniu leadera. Pelni pozniej tylko funkcje przekazywania komunikatow.
+Po zakonczeonej serii rund, tylko wierzcholki, ktore sa nadal kandydatami na leadera wysylaja komunikaty do sasiadow.
+W kolejnym rundach wysylane sa komunikaty do sasiadow oddalnych o 1, 2, 4, 8, ...
+Poniewaz wierzcholki wiedza, ile jest lacznie wierzcholkow w ringu, wiec po NlgN + c (-jakas mala stala, prawdopodobnie mniejsza niz 5) rundach
+wierzcholek ktory nadal jest kandydatem na leadera wie, ze to on jest leaderem...
+
+Po kazdej z serii, ilosc kandydatow na leadera maleje przyjamniej dwukrotnie, zatem na pewno po lgN seriach kandydat na leadera zostanie
+tylko jeden.

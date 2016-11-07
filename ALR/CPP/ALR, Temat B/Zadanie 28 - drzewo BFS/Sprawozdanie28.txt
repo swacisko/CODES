@@ -1,0 +1,25 @@
+W programie zosta³ zaimplementowany algorytm znajdowania drzewa BFS w dowolnym grafie.
+
+Na poczatku tworzymy( lub pozwalamy programowi stworzyc ) graf oraz wybieramy wierzcholek od ktorego chcemy
+zaczac budowac drzewo BFS.
+
+( w przypadku tworzenia grafu przez wlasny algorytm wartosc oczekiwana ilosci krawedzi w grafie jest rowna 3/(N-1),
+gdzize N jest iloscia wierzcholkow w grafie. Wartosc jest tak dobrana, zeby moc stworzyc wiekszy graf i w rozsadnym czasie byc
+w stanie recznie sprawdzic poprawnosc kolejnych krokow lagorytmu   )
+
+
+
+W pierwszym kroku wierzcholek startowy wysyla wiadomosci do swoich sasiadow ze swoim id_los;
+
+W kolejnych turach, jesli wierzcholek otrzymuje jakis komunikat, to:
+
+a) jesli juz ma ustalonego rodzica w drzewie, to nic nie robi
+b) jesli jeszcze nie ma ustalonego rodzica, to jako swojego rodzica przyjmuje nr id_los z pierwszgo odczytanego komunikatu,
+	a nastepnie wysyla wszystkim swoim sasiadom swoje id_los;
+
+W ten sposob zostaje tworzone drzewo BFS;
+
+Podczas pracy programu, po kolejnych turach mozna zwizualizowac 'stan' grafu i zobaczyc, do jakiego miejsca zosta³o w danym momencie
+zbudowane drzewo...
+
+Czas dzialania algorytmu to w pesymistycznym przypadku oczywiscie O(N) rund. Ilosc komunikatow jest rzedu O(M), czyli O(N^2), poniewaz kazdy wierzcholek wysle dokladnie jeden komunikat do kazdego swojego sasiada ( przy zalozeniu ze graf jest spojny ).

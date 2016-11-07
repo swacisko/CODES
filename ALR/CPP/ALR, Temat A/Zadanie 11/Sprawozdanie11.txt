@@ -1,0 +1,12 @@
+W pliku znajdujacym sie w tym folderze zostal zaimplementowany algorytm, ktory w danym drzewie sciaga obraz calego drzewa do
+ustalonego wierzcholka('korzenia'), w tym przypadku do wierzcholka o id = 0.
+
+Na wejsciu zostaje wczytana liczba N oraz automatycznie stworzone drzewo na N wierzcholkach. Nie jest to ukorzenione drzewo, zatem kazdy wierzcholek posiada pelna liste sasiadow.
+
+Algorytm dziala nastepujaco:
+Jezeli pewien wierzholek jest stopnia 1(nie bedzie to v), i nie jest to korzen, to wysyla do swojego sasiada(oznaczmy go przez w) posiadany w danej chwili obraz grafu. Wierzcholek w scala swoj obraz grafu ze wszystkimi obrazami otrzymanymi od sasiadow, a nastepnie usuwa tych sasiadow ze swojej listy. Poniewaz po takich usunieciach, otrzymana struktura jest nadal drzewem, zatem posiada conajmniej 2 wierzcholki stopnia 1.
+Id conajmniej jednego z nich jest rozne od 0, zatem oalgorytm sie skonczy dopiero, gdy jedynym wierzcholkiem w drzewie pozostanie wierzcholek
+o id = 0. Posiada on wtedy obraz calego grafu.
+
+Algorytm dziala w czasie O( diam(T) ). Jest tak, poniewaz "lokalny obraz" z wierzcholka v dotrze do "korzenia" dopiero po d(v,"korzen") rundach.
+W pesymstycznym przypadku bedzie to oczywiscie diam(T) rund.

@@ -1,0 +1,33 @@
+Sprawozdanie to dotyczy zadania 23 - znajdowania orientacji krawedzi w drzewie, przy ograniczonym outdeg ( outdeg <= 2 ) (*).
+
+
+
+Na poczatku program tworzy losowe drzewo. Dla tak stworzonych(losowo) drzew, program z regu³y potrzebuje bardzo ma³¹ iloœæ rund, aby znalezc
+szukan¹ orientacjê.
+
+Opis algorytmu:
+
+Algorytm dzia³a w rundach. Ka¿da z rund sk³ada siê z dwóch 'podrund'. Z tego wzglêdu algorytm bêdzie zawsze dzia³a³ parzyst¹ liczbê rund.
+
+W rundach nieparzystych:
+	Jesli wierzcholek v dostaje komunikat( czyli id ) od wierzcholka w, to usuwa go, ze swojej listy sasiedztwa.
+	Tak postêpuje dla ka¿dego otrzymanego komunikatu (np. w przypadku grafu-gwiazdy, w trzeciej rundzie wierrzcho³ek 'srodkowy'
+	usunie wszystkich swoich sasiadow)
+	Nastêpnie, je¿eli stopien wierzcholka v jest nie wiekszy niz 2(i rozny od 0), wysyla on komunikat( swoje id ) do swoich sasiadow i 	konczy swoje dzia³anie w tej rundzie.
+
+
+W rundach parzystych:
+	Jesli wierzcholek v ma stopien wiekszy niz 2 lub rowny 0 to nic nie robi. W przeciwnym wypadku:
+	Dla kazdego swojego sasiada w:
+	je¿eli nie odbiera w tej rundzie komunikatu od wierzcholka w, to wprowadza orientacje krawedzi v->w.
+	Jesli zaœ odbiera w tej rundzie komunikat od wierzcholka w, to wprowadza orientacje krawedzi v-> tylko wtedy, gdy id(w) < id(v).
+	To na gwarantuje, ¿e krawêdŸ nie zostanie zorientowana w dwie ró¿ne strony.
+	Pod koniec rundy wierzcholek wysy³a wsystkim swoim sasiadom swoje id( aby na poczatku nastepnej, nieparzystej rundy, móg³ zostaæ
+	usuniety).
+
+
+
+Czas dzia³ania algorytmu jest rzêdu maxymalnie O( NlgN ), poniewa¿ w ka¿dej rundzie( ka¿dej parze rund ) istnieje conajmniej N/2 ( gdzie N
+to aktualny rozmiar drzewa) wierzcholkow takich, ze wszystkie krawedzie do ktorych nale¿¹ te wierzcholki zostan¹ zorientowane. 
+Tymi wierzcholkami sa wierzcholki stopnia nie wiekszego niz 2.
+

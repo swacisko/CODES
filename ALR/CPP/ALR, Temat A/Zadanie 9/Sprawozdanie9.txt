@@ -1,0 +1,4 @@
+W pliku zosta³ zaimplementowany algorytm obliczajacy sume ID wszystkich wierzcholkow  z ringu.
+Algorytm ten dziala w czasie O(N) oraz wykorzystuje O(N) komunikatow - zatem spelnia oba warunki z zadania.
+
+Po ringu zostaje przeyslany dookola komunikat, ktory po drodze zostaje sumowany z id_los poszczegolnych wierzcholkow... Po wykonaniu 2N+1 rund(kazdy wierzcholek ma wslasny licznik rund od poczatku, aby wszystkie mogly sie skonczyc jednoczesnie) wiadomo, ze na pewno wszystkie wierzcholki znaja sume_id, mozna wiec przerwac dzialanie algorytmu

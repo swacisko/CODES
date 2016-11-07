@@ -1,0 +1,30 @@
+W za³¹czonym pliku znajduje siê rozwi¹zanie zadania 36 - Wierzcho³ki w kulach.
+
+Program wczytuje liczbe N, nastêpnie tworzy kratê N*N. Kazdemu wierzcholkowie kraty przypisuje losowo kolor czarny lub bialy,
+z prawdopodobieñstwem 1/4 dla koloru czarnego(zeby mozna stosunkowo ³atwo przeœledziæ dzia³anie algorytmu).
+
+Algorytm dzia³a nastêpuj¹co:
+Na pocz¹tku ka¿dy wierzcho³ek czarny wysy³a wszystkim s¹siadom swoje id_los, wraz ze swoim r_v, oraz 'odlegloscia komunikatu' rowna 1.
+W nastêpnych krokach, kazdy wierzcholek, ktory otrzymuje jakis komunikat(wykonuje te kroki dla kazdego otrzymanego komunikatu):
+	Zapisuje, od ktorego wierzcholka otrzymal dany komunikat
+	Pozniej, je¿eli jest to pierwszy komunikat odebrany od danego wierzcholka, to:
+		Jesli odleglosc przebyta przez ten komunikat jest mniejsza niz r_v wierzcholka odbierajacego komunikat, to znaczy, ze
+		wierzcholek wysylajacy komunikat znajduje sie w kuli wierzcholka odbierajacego.
+
+		Wierzcholek odbierajacy wysyla wszystkim swoim sasiadom odebrany komunikat, ale ze zwiêkszon¹ odleg³oœcia o 1.
+
+
+W ten sposob, kazdy komunikat przebêdzie drogê do wszystkich wierzcho³ków, po najkrótszej mo¿liwej drodze.
+Czas dzia³ania jest wiêc rzêdu O(N) rund, gdzie N to szerokoœæ kraty( liczba wierzcholkow to N^2).
+
+
+Warto zauwa¿yæ, ze dany algorytm mo¿e dzia³aæ dla dowolnego grafu, nie tylko dla kraty.
+
+Mo¿na minimalnie zoptymalizowaæ ten algorytm w nastepuj¹cy sposób:
+
+	Kazdy czarny wierzcholek buduje 'dla siebie' drzewo BST(np w sposob zaprezentowany w rozwiazaniu zadania 28).
+	Nastepnie kazdy czarny wierzcholek tego drzewa przsy³a po kolei swoje id_los do korzenia drzewa.
+
+W ten sposób czas dzia³ania algorytmu wyniesie O( max(r_v) ) rund, czyli w œrednim przypadku nadal O(N) rund.
+Ilosc komunikatow te¿ pozostanie œrednio na poziomie O(N) jednak jest to oszacowanie asymtotyczne, w rzeczywistoœci sta³a zmaleje
+kilukrotnie.
