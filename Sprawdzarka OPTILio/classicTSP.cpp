@@ -2,7 +2,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
-//#include<map>
+#include<map>
 //#include<complex>
 //#include<stack>
 //#include<list>
@@ -57,6 +57,13 @@ typedef vector<LL> VLL;
 typedef vector<VLL> VVLL;
 typedef vector<PII> VPII;
 
+int startTime = 0;
+
+// return true if i can continue calculations, otherwise returns false
+bool checkExecutionTime( int maxExecutiontime ){
+	if( ((float)clock() - startTime) / (float)CLOCKS_PER_SEC > (0.95f)*(float)maxExecutiontime ) return false;
+	return true;
+}
 
 
 namespace TSP{	
@@ -68,7 +75,7 @@ namespace TSP{
 	
 	
 	int N;
-	double perimeter;
+	double perimeter = 2000000000;
 	VI cities; // cities[i] is the i-th town number on the tour - if tour start with city i, then cities[i] = 0	
 	VPTT D; // these are cities' coordinates
 	VVI closest; // closest[i][k] is the k-th closest city to town i
@@ -126,7 +133,7 @@ namespace TSP{
 		closest = VVI(N);
 		REP(i,N){
 			sortmark = D[i];
-			sort( ALL(clst), sortcomp );
+			if( N < 1500 || checkExecutionTime(0.75) ) sort( ALL(clst), sortcomp );
 			closest[i] = clst;
 			
 		//	REP(k,SIZE(clst)) cout << clst[k]+1 << " ";
@@ -144,33 +151,43 @@ namespace TSP{
 	
 	// creates nearest-neighbour tour
 	// in cities will be the nearest-neighbour tour craeted by this function
-	void createNNTour(){
-		//cout << "createNNTour()" << endl;
+	void createNNTour( int beg ){
+	//	cout << "createNNTour() beg = " << beg << endl;
 		
-		cities = VI(N);
-		cities[0] = 0;
+		VI cities2 = VI(N);
+		cities2[beg] = 0;
 		VB was(N,false);
-		was[0] = true;
-		int a=0,b;
+		was[beg] = true;
+		int a=beg,b;
 		FOR(i,1,N-1){
 			FOR( k,1, N-1 ){
 				b = closest[a][k];
 				if( !was[b] ){
 				//	cout << "b = " << b << "     ";
-					cities[b] = i;
+					cities2[b] = i;
 					was[b] = true;
 					a = b;
+					if( !checkExecutionTime(1) ) return;
 					break;
 				}
 			}
 		}
 		
-		tour = VI(N);
-		REP( i,N ) tour[ cities[i] ] = i;
+		if( tour.empty() ) tour = VI(N);
 		
-		perimeter = getPerimeter();	
+		VI tourtemp = tour;
+		REP( i,N ) tour[ cities2[i] ] = i;
 		
-		//cout << "\tout of createNNTour()" << endl;
+		double temp;
+		if( (temp = getPerimeter() ) < perimeter ){			
+			cities = cities2;
+			perimeter = temp;
+		}else{
+			tour = tourtemp;
+		}
+		
+	//	cout << "\tour of createNNTour() with beg in " << beg << endl;
+	//	WRITE(tour);
 	}
 	
 	VI getKClosest( int city, int K=12 ){
@@ -262,6 +279,7 @@ namespace TSP{
 	// makes the 3-opt operation in the vicinity of city p
 	// takes O(N) time to perform single 3-opt operation
 	void _3opt( int city, int K ){
+		if( !checkExecutionTime(1) ) return;
 		
 		VI v;
 		//VI tour = getTour();
@@ -399,8 +417,12 @@ namespace TSP{
 				
 		createDst();
 		createClosest();
-		createNNTour();
-		
+		REP(i,N){
+			createNNTour(N-1-i);
+			if( !checkExecutionTime(1) ){
+				return tour;
+			}
+		}
 		REP(i,N) cities[tour[i]] = i;	
 				
 	//	cout << "At the beginning perimeter = " << perimeter << endl;
@@ -410,15 +432,19 @@ namespace TSP{
 		VI perm(N);
 		REP(i,N) perm[i] = i;
 		
-		int repet = 100; // the more repetitons- the more 3-opt operations will be done, and hence, the greater chance, the tour will be shorter
+		int repet = 1000; // the more repetitons- the more 3-opt operations will be done, and hence, the greater chance, the tour will be shorter
 		int A = 12;
 		REP(i,repet){
 			
 			random_shuffle( ALL(perm) );
 			REP( k,SIZE(perm) ){
 				if( k < (N/3) ) _pathKOpt( perm[ (k+(N/2))%N ], 5 );			
-				_3opt( perm[k],A );								
+				_3opt( perm[k],A );
+				
+				if( !checkExecutionTime(1) ) return tour;
 			}
+			
+			if( !checkExecutionTime(1) ) return tour;
 			
 			if( i%10 <= 1 ) A = 26;
 			else A = 12;
@@ -445,26 +471,31 @@ void solve(){
 	
 	int N=0;
 		
-	vector< pair<double,double> > D(100000);
+	vector< pair<double,double> > D;
 	
 	double x,y;
 	int id;
-	
-	bool waszero = false;
+	map<int,int> idNumbering;
+	idNumbering.clear();
+	//bool waszero = false;
 	while( cin >> id ){
 		cin >> x >> y;
 		
 		//if( id > 10000 ) while(1);
 		
-		if( id == 0 ) waszero = true;
-		D[id] = MP( x,y );
+		//cout << "here" << endl;
+		idNumbering[N] = id;
+	//	if( id == 0 ) waszero = true;
+		D.PB( MP(x,y) );
 		N++;
 	}
 	
-	if( waszero == false ) D.erase( D.begin() );
-	else D.pop_back();
 	
-	D.resize(N);
+	
+	//if( waszero == false ) D.erase( D.begin() );
+	//else D.pop_back();
+	
+	//D.resize(N);
 	
 	VI tour = TSP::TSP(D);
 	/*VI tour(N);
@@ -473,9 +504,10 @@ void solve(){
 	
 	REP(i,SIZE(tour)){
 		//printf("%d ", tour[i]+1);
-		cout << tour[i]+1 << " ";
+		cout << idNumbering[ tour[i] ] << endl;
 	}
 	cout << endl;
+	// cout << "At the end perimeter = " << TSP::perimeter << endl;
 	//printf("\n");
 }
 
@@ -485,6 +517,7 @@ int main(){
 	srand( unsigned(time(0)) );
 	ios_base::sync_with_stdio(0);
 	
+	startTime = clock();
 	solve();
 
 
